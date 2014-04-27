@@ -6,13 +6,14 @@
 
 USING_NS_CC;
 
-Scene* <{SCENE_CLASS_NAME}>::createScene()
+Scene* <{SCENE_CLASS_NAME}>::createScene(<{ARGUMENT_TYPE}> <{ARGUMENT_NAME}>)
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
     auto layer = <{SCENE_CLASS_NAME}>::create();
+    layer->_initWithArg(<{ARGUMENT_NAME}>);
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -35,4 +36,8 @@ bool <{SCENE_CLASS_NAME}>::init()
     _sceneSize = Director::getInstance()->getVisibleSize();
 
     return true;
+}
+
+void <{SCENE_CLASS_NAME}>::_initWithArg(<{ARGUMENT_TYPE}> <{ARGUMENT_NAME}>)
+{
 }
