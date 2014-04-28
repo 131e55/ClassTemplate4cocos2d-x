@@ -28,6 +28,9 @@ private:
     // もともと作られてる init() は引数を持たせられないみたいなので,
     // 引数を createScene() で受け取り _initWithArg() へ横流しすることにする
     void _initWithArg(<{ARGUMENT_TYPE}> <{ARGUMENT_NAME}>);
+
+    // 受け取った文字列によって次に遷移するシーンを決める
+    void _transition(const std::string name);
 };
 
 #endif /* defined(<{MACRO_NAME}>) */

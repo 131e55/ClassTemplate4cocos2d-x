@@ -40,4 +40,27 @@ bool <{SCENE_CLASS_NAME}>::init()
 
 void <{SCENE_CLASS_NAME}>::_initWithArg(<{ARGUMENT_TYPE}> <{ARGUMENT_NAME}>)
 {
+    
+}
+
+void <{SCENE_CLASS_NAME}>::_transition(const std::string name)
+{
+    TransitionCrossFade* transition = NULL;    // クラスは好きに変える
+    float time = 0.5f;                         // 遷移にかかる時間
+
+    /*
+    if (name == <{SCENE_NAME}>) {
+        transition = TransitionCrossFade::create(time, <{NEXT_SCENE_CLASS_NAME}>::createScene());
+    }
+    else if (name == <{OTHER_SCENE_NAME}>) {
+        transition = TransitionCrossFade::create(time, <{OTHER_NEXT_SCENE_CLASS_NAME}>::createScene());
+    }
+    */
+
+    if (transition != NULL) {
+        Director::getInstance()->replaceScene(transition);
+    }
+    else {
+        log("_transition(): scene named %s is not found", name.c_str());
+    }
 }
