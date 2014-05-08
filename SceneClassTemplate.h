@@ -25,6 +25,10 @@ private:
     // でできるけど長いうえによく使うので最初に取得してその後ずっと持っておくことにする
     cocos2d::Size _sceneSize;
 
+    // _sceneSize.width, _sceneSize.height を直接
+    float _sceneWidth;
+    float _sceneHeight;
+
     // もともと作られてる init() は引数を持たせられないみたいなので,
     // 引数を createScene() で受け取り _initWithArg() へ横流しすることにする
     void _initWithArg(<{ARGUMENT_TYPE}> <{ARGUMENT_NAME}>);

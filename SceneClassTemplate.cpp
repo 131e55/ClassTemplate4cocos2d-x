@@ -34,6 +34,8 @@ bool <{SCENE_CLASS_NAME}>::init()
 
     // シーンサイズの取得
     _sceneSize = Director::getInstance()->getVisibleSize();
+    _sceneWidth = _sceneSize.width;
+    _sceneHeight = _sceneSize.height;
 
     return true;
 }
